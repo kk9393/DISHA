@@ -1,0 +1,159 @@
+.button {
+    font-family:Futura;
+    background-color: #db5046;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.button:hover {
+    background-color: #ad342b;
+    color: white;
+}
+
+.footer {
+   font-family:Futura;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #97c05a;
+   color: white;
+   text-align: center;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #ededed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.topmarginfirst {
+margin-top: 250px;
+}
+
+.topmarginlist {
+margin-top: 150px;
+}
+
+.topmarginhomepagebutton {
+margin-top: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33%;
+  padding: 5px;
+}
+
+.navhead {
+  font-family:Futura;
+  font-size: 30px;
+}
+
+.btn-group button {
+    font-family:Futura;
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    background-color: #bababa; /* Green background */
+    color: black; /* White text */
+    padding: 20px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 70%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    margin-bottom: 5px;
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #9b9b9b;
+}
+
+.body {
+    overflow: scroll;
+    margin-bottom: 150px;
+}
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
