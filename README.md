@@ -1,10 +1,10 @@
-# DISHA : Decentralized and Integrated Shipping ports Administration
+## DISHA : Decentralized and Integrated Shipping ports Administration
 
-# DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 competition. For more information about platform, please go to Documents directory in this folder.
+## DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 competition. For more information about platform, please go to Documents directory in this folder.
 
 
 -------------------------------------------------------
-# Package requirements :
+## Package requirements :
 
 1. npm : https://www.npmjs.com/get-npm
 2. Truffle Framework : https://truffleframework.com/
@@ -13,7 +13,7 @@
 -------------------------------------------------------
 
 -------------------------------------------------------
-# Run :
+## Run :
 
 1. Install all packages
 2. Run Ganache
@@ -24,13 +24,10 @@
 6. $ npm run dev
 -------------------------------------------------------
 
-------- Developed by -------
-     # Team CodeXpert #
+------- Developed by : Team CodeXpert -------
 
       Ganesh Deshpande
       Krishna Kulkarni
 ----------------------------
 
---------- Contact ----------
-krishnakulkarni9393@gmail.com
-----------------------------
+Contact : krishnakulkarni9393@gmail.com
