@@ -1,6 +1,6 @@
 ## DISHA : Decentralized and Integrated Shipping ports Administration
 
-## DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 competition. For more information about platform, please go to Documents directory in this folder.
+DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 competition. For more information about platform, please go to Documents directory in this folder.
 
 
 -------------------------------------------------------
