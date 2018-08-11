@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="text-align:center;background-color:#d1d1d1;">
+
+<div class="navbar">
+    <p><a href="../index.html"><img src="../images/DISHA_logo.png" alt="DISHA_Logo" style="height:80px;padding-top: 10px;" align="middle"></a><a style="margin-left:100px"><a class="navhead" style="color: #db5046">D</a><a class="navhead">ecentralized and </a><a class="navhead" style="color: #db5046">I</a><a class="navhead">ntegrated </a><a class="navhead" style="color: #db5046">Sh</a><a class="navhead">ipping ports </a><a class="navhead" style="color: #db5046">A</a><a class="navhead">dministration</a></a></p>
+</div>
+
+
+    <p style="font-size: 20px;"><b>Import General Manifest Form</b></p>
+
+
+
+
+    <div class="container">
+        <form style="margin-left: 150px; margin-right: 150px;" id="myform" runat="server">
+
+
+
+            <label for="uniqueidid">Unique ID</label>
+            <input type="text" id="uniqueidid" name="uniqueidid" placeholder="Type Unique ID here.." />
+            <p><a align ="center" id="UniqueIdfield_tmp"></a></p>
+            <br>
+
+            <label for="billnoid">Bill number</label>
+            <input type="integer" id="billnoid" name="billnoid" placeholder="Type bill number here.." />
+
+            <label for="nameofexporterid"> Name of Exporter</label>
+            <input type="text" id="nameofexporterid" name="nameofexporterid" placeholder="Type name of exporter.."/>
+
+         <!--   <label for="country">Country (not used yet)</label>
+            <select id="country" name="country" style="margin-top: 6px;margin-bottom: 16px;">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>  -->
+
+            <label for="commoditydescriptionid">Commodity description</label>
+            <textarea id="commoditydescriptionid" name="commoditydescriptionid" placeholder="Type description of commodity.." style="height:150px"></textarea>
+
+            <br>
+            <br>
+            <p style="margin-top: 20px"><a align ="center" style="color:red" id="mandatoryid"></a></p>
+            <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="UniqueIdoutput"></a></p>
+
+            <br>
+            <input class="button" type="button" id="sign_button"  value="Confirm" onclick="return App.SetIGMdata_js();">
+        </form>
+    </div>
+
+    <div class="container topmarginfirst">
+        <form style="margin-left: 150px; margin-right: 150px;" id="officialform" runat="server">
+            <p style="margin-top: 20px"><a align ="center" style="color:red">FOR OFFICIAL USE ONLY</a></p>
+            <br>
+
+            <label for="uniqueidid2">Unique ID</label>
+            <input type="text" id="uniqueidid2" name="uniqueidid2" placeholder="Type Unique ID here.." />
+            <p ><a align ="center" id="UniqueIdfield_tmp2"></a></p>
+            <br>
+
+            <label for="nameofofficialid"> Name of signed Official</label>
+            <input disabled type="text" id="nameofofficialid" name="nameofofficialid" placeholder="Name of signed official will be shown here.."/>
+            <br>
+            <input class="button" type="button" id="sign_official_button"  value="Confirm" onclick="return App.signIMG_official_js();">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/web3.min.js"></script>
+    <script src="../js/truffle-contract.js"></script>
+    <script src="../js/jsfiles/IGM.js"></script>
+
+   </body>
+</html>

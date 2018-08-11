@@ -7,15 +7,28 @@
     <body style="text-align:center;background-color:#d1d1d1;">
 
         <div class="navbar">
-            <p><a href="../index.html"><img src="../images/DISHA_logo.png" alt="DISHA_Logo" style="height:80px;padding-bottom: 10px;" align="middle"></a><a style="margin-left:100px"><a class="navhead" style="color: #db5046">D</a><a class="navhead">ecentralised and </a><a class="navhead" style="color: #db5046">I</a><a class="navhead">ntegrated </a><a class="navhead" style="color: #db5046">Sh</a><a class="navhead">ipping ports </a><a class="navhead" style="color: #db5046">A</a><a class="navhead">dministration</a></a></p>
+            <p><a href="../index.html"><img src="../images/DISHA_logo.png" alt="DISHA_Logo" style="height:80px;padding-bottom: 10px;" align="middle"></a><a style="margin-left:100px"><a class="navhead" style="color: #db5046">D</a><a class="navhead">ecentralized and </a><a class="navhead" style="color: #db5046">I</a><a class="navhead">ntegrated </a><a class="navhead" style="color: #db5046">Sh</a><a class="navhead">ipping ports </a><a class="navhead" style="color: #db5046">A</a><a class="navhead">dministration</a></a></p>
         </div>
 
-        <a href="contract_list.html"><button class="button topmarginfirst">Sign Contract</button></a>
-        <a href="#ref"><button class="button topmarginfirst">Get History</button></a>
+        <a href="contract_list.html"><button class="button topmarginfirst">Sign Contracts</button></a>
+
+        <input class="button topmarginfirst" type="submit"  value="Generate UID" onclick="App.generateUID_js();">
+
+        <br>
+
+        <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="showUID"></a></p>
+
 
         <div class="footer">
             <p ><a href="https://www.movehack.gov.in/global-mobility-hackathon/" target="_blank"><img src="../images/MoveHack_logo.png" alt="MOVEHACK_Logo" style="height:100px;" align="middle"></a><a style="margin-left: 100px";>Blockchain for streamlining of Shipping Ports in India, By Team CodeXpert</a></p>
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/web3.min.js"></script>
+        <script src="../js/truffle-contract.js"></script>
+        <script src="../js/jsfiles/third_party.js"></script>
+
 
     </body>
 </html>

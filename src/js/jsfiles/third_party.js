@@ -1,13 +1,12 @@
+var Unique_ID_var;
 App = {
   web3Provider: null,
   contracts: {},
   account: '0x0',
 
-
   init: function() {
     return App.initWeb3();
   },
-
 
   initWeb3: function() {
     // TODO: refactor conditional
@@ -31,7 +30,6 @@ App = {
       App.contracts.Shipping.setProvider(App.web3Provider);
       App.listenForEvents();
       return App.render();
-
     });
   },
 
@@ -44,25 +42,38 @@ App = {
         toBlock: 'latest'
       }).watch(function(error, event) {
         console.log("UniqueId is generated2", event);
-        document.getElementById("UniqueId").innerHTML = event.args._uniqueId.toString();
+        console.log("UniqueId is ", Unique_ID_var);
+        Unique_ID_var = event.args._uniqueId.toString();
+        console.log("UniqueId is ", Unique_ID_var);
       });
     });
-  },   
+  },
 
+  generateUID_js: function() {
 
-  SetIGMdata_js: function() {
-    console.log("Confirm button is pressed");
-    var billnoid = document.getElementById("billnoid").value;
-    console.log("Confirm button is pressed1");
-    var nameofexporterid = document.getElementById("nameofexporterid").value;
-    console.log("Confirm button is pressed2");
+        console.log("Generate UID pressed");
 
     App.contracts.Shipping.deployed().then(function(instance) {
       console.log("Confirm button is pressed3");
-      return  instance.SetIGMdata(billnoid, nameofexporterid, { from: App.account });           
+      return  instance.GetUniqueId( { from: App.account });
     }).catch(function(err) {
       console.log("Confirm button is pressed5");
       console.error(err);
+    });
+
+    web3.eth.filter('latest', function(error, result){
+       if (!error) {
+          console.log("********Transaction is confirmed!!!");
+
+          setTimeout(function () {
+          var uidstr1 = "Your Unique ID is :<br> <b>";
+          var uidstr2 = uidstr1.concat(Unique_ID_var, "</b><br>Please keep it safe for future reference");
+          document.getElementById("showUID").innerHTML = uidstr2;
+              }, 3000);
+
+       } else {
+          console.error(error)
+       }
     });
   },
 
@@ -70,7 +81,6 @@ App = {
      web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
-       
       }
     });
  },
@@ -80,6 +90,6 @@ $(function() {
   $(window).load(function() {
     App.init();
   });
-}); 
+});
 
 
