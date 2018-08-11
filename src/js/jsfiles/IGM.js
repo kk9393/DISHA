@@ -1,4 +1,6 @@
 var checkuiqueIdvar;
+var checkuiqueIdvar2;
+
 App = {
   web3Provider: null,
   contracts: {},
@@ -44,6 +46,18 @@ App = {
         console.log("UniqueId is generated2", event);
         checkuiqueIdvar = event.args._isgenerated;
         console.log("checkuiqueIdvar :", checkuiqueIdvar);
+      });
+    });
+
+    App.contracts.Shipping.deployed().then(function(instance) {
+      console.log("UniqueId is generated1", event);
+      instance.CheckIGMofficialverificationEvent({}, {
+        fromBlock: 'latest',
+        toBlock: 'latest'
+      }).watch(function(error, event) {
+        console.log("UniqueId is generated2", event);
+        checkuiqueIdvar2 = event.args._isIGMofficialverified;
+        console.log("checkuiqueIdvar2 :", checkuiqueIdvar2);
       });
     });
   },   
@@ -94,6 +108,42 @@ App = {
   },
 
   signIMG_official_js: function(){
+    console.log("Confirm button is pressed01");
+    var uniqueidid2 = document.getElementById("uniqueidid2").value;
+    console.log("UID2 temp", uniqueidid2);
+
+    if(!uniqueidid2){
+        document.getElementById("mandatoryid2").innerHTML = "* All fields must be filled";
+        return false;
+    }else{
+        document.getElementById("mandatoryid2").innerHTML = "";
+    }
+
+
+    App.contracts.Shipping.deployed().then(function(instance) {
+      console.log("Confirm button is pressed31");
+      return  instance.sign_IGM(uniqueidid2, { from: App.account });
+    }).catch(function(err) {
+      console.log("Confirm button is pressed51");
+      console.error(err);
+    });
+
+    web3.eth.filter('latest', function(error, result){
+       if (!error) {
+          setTimeout(function () {
+                 if(checkuiqueIdvar2 ==true){
+                    console.log("checkuiqueIdvar check", checkuiqueIdvar2);
+                    document.getElementById("UniqueIdoutput2").innerHTML = "Your form is submitted and digitally signed successfully";
+                 }else{
+                    console.log("checkuiqueIdvar check", checkuiqueIdvar2);
+                    document.getElementById("UniqueIdoutput2").innerHTML = "Failed to sign";
+                }
+              }, 3000);
+       } else {
+          document.getElementById("UniqueIdoutput2").innerHTML = "Failed to sign the contract";
+          console.error(error)
+       }
+    });
 
 
   },
@@ -157,10 +207,12 @@ App = {
 
 
       getStoredUID_js: function(_uniqueid) {
-
+         var election_instance;
          App.contracts.Shipping.deployed().then(function(instance) {
              console.log("Render instance deployed");
-             return  instance.datamapping(_uniqueid);
+             election_instance = instance
+             return election_instance}).then(function(instance){
+             return instance.datamapping(_uniqueid);
          }).then(function(data) {
 
              var isgenerated_tmp = data[0];
@@ -169,6 +221,24 @@ App = {
                  document.getElementById("UniqueIdfield_tmp2").innerHTML = "UID Validated";
              }else{
                  document.getElementById("UniqueIdfield_tmp2").innerHTML = "Invalid UID";
+             }
+
+             var IGM_signed_official_address = data[5];
+             console.log("IGM_signed_official_address", IGM_signed_official_address);
+             if(IGM_signed_official_address){
+                 election_instance.IGM_officials(IGM_signed_official_address).then(function(IGM_officials){
+                 IGM_official_name_tmp = IGM_officials[0];
+                 console.log("IGM_official_name_tmp", IGM_official_name_tmp);
+                 document.getElementById("nameofofficialid").value = IGM_official_name_tmp;
+                 document.getElementById("contract_status").innerHTML = "The contract is already signed";
+                 document.getElementById("sign_official_button").disabled = true;
+                 });
+                 document.getElementById("nameofofficialid").disabled = true;
+             }else{
+                 document.getElementById("nameofofficialid").innerHTML = "";
+                 document.getElementById("nameofofficialid").disabled = false;
+                 document.getElementById("contract_status").innerHTML = "";
+                 document.getElementById("sign_official_button").disabled = false;
              }
          });
 

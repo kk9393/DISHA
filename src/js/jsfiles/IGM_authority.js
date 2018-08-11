@@ -99,7 +99,7 @@ App = {
               document.getElementById("authorize_button").disabled = true;
           }else{
               document.getElementById("nameofofficialid").value = '';
-              document.getElementById("authorize_return").value = '';
+              document.getElementById("authorize_return").innerHTML = '';
               document.getElementById("nameofofficialid").disabled = false;
               document.getElementById("authorize_button").disabled = false;
           }
