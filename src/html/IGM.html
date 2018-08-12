@@ -31,7 +31,7 @@
             <input type="integer" id="billnoid" name="billnoid" placeholder="Type bill number here.." />
 
             <label for="nameofexporterid"> Name of Exporter</label>
-            <input type="text" id="nameofexporterid" name="nameofexporterid" placeholder="Type name of exporter.."/>
+            <input type="text" id="nameofexporterid" name="nameofexporterid" placeholder="Type name of exporter here.."/>
 
          <!--   <label for="country">Country (not used yet)</label>
             <select id="country" name="country" style="margin-top: 6px;margin-bottom: 16px;">
@@ -40,8 +40,35 @@
                 <option value="usa">USA</option>
             </select>  -->
 
-            <label for="commoditydescriptionid">Commodity description</label>
-            <textarea id="commoditydescriptionid" name="commoditydescriptionid" placeholder="Type description of commodity.." style="height:150px"></textarea>
+            <label for="commoditydescriptionid">Commodity Description</label>
+            <textarea id="commoditydescriptionid" name="commoditydescriptionid" placeholder="Type description of commodity here.." style="height:150px"></textarea>
+
+            <label for="countryid">Country</label>
+            <input type="text" id="countryid" name="countryid" placeholder="Type name of country here.."/>
+
+            <label for="nameofoceancarrierid">Name of Ocean Carrier</label>
+            <input type="text" id="nameofoceancarrierid" name="nameofoceancarrierid" placeholder="Type name of ocean carrier here.."/>
+
+            <label for="nameofshipperid">Name of Shipper</label>
+            <input type="text" id="nameofshipperid" name="nameofshipperid" placeholder="Type name of shipper here.."/>
+
+            <label for="vesselnameid">Vessel Name</label>
+            <input type="text" id="vesselnameid" name="vesselnameid" placeholder="Type vessel name here.."/>
+
+            <label for="weightofcargoid">Weight of Cargo</label>
+            <input type="integer" id="weightofcargoid" name="weightofcargoid" placeholder="Type weight of cargo here.."/>
+
+            <label for="containernumberid">Container Number</label>
+            <input type="text" id="containernumberid" name="containernumberid" placeholder="Type container number here.."/>
+
+            <label for="placeofissueid">Place of Issue</label>
+            <input type="text" id="placeofissueid" name="placeofissueid" placeholder="Type place of issue here.."/>
+
+            <label for="placeofdeliveryid">Place of Delivery</label>
+            <input type="text" id="placeofdeliveryid" name="placeofdeliveryid" placeholder="Type place of delivery here.."/>
+
+            <label for="portofloadingid">Port of Loading</label>
+            <input type="text" id="portofloadingid" name="portofloadingid" placeholder="Type port of loading here.."/>
 
             <br>
             <br>
@@ -49,7 +76,7 @@
             <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="UniqueIdoutput"></a></p>
 
             <br>
-            <input class="button" type="button" id="sign_button"  value="Confirm" onclick="return App.SetIGMdata_js();">
+            <input class="button" type="button" id="sign_button"  value="Sign" onclick="return App.SetIGMdata_js();">
         </form>
     </div>
 
@@ -69,7 +96,7 @@
             <p style="margin-top: 20px"><a align ="center" style="color:red" id="mandatoryid2"></a></p>
             <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="UniqueIdoutput2"></a></p>
             <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="contract_status"></a></p>
-            <input class="button" type="button" id="sign_official_button"  value="Verify" onclick="return App.signIMG_official_js();">
+            <input class="button" type="button" id="sign_official_button"  value="Sign" onclick="return App.signIMG_official_js();">
         </form>
     </div>
     <br>

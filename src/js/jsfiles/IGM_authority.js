@@ -39,7 +39,7 @@ App = {
     console.log("address temp", addressid);
 
     var nameofofficialid = document.getElementById("nameofofficialid").value;
-
+    console.log("nameofofficialid****** : ", nameofofficialid);
     if(!addressid || !nameofofficialid){
         document.getElementById("mandatoryid").innerHTML = "* All fields must be filled";
         return false;
@@ -47,13 +47,12 @@ App = {
         document.getElementById("mandatoryid").innerHTML = "";
     }
 
-
     App.contracts.Shipping.deployed().then(function(instance) {
       console.log("Confirm button is pressed3");
       return  instance.authorize_IGM(addressid, nameofofficialid, { from: App.account });
     }).catch(function(err) {
       console.log("Confirm button is pressed5");
-      document.getElementById("authorize_return").innerHTML = "Authorization not successful!";
+      document.getElementById("authorize_return").innerHTML = "Failed Transaction!";
       isauthority = false;
       console.error(err);
     });
@@ -62,7 +61,7 @@ App = {
        if (!error) {
           setTimeout(function () {
                 if(isauthority){
-                    document.getElementById("authorize_return").innerHTML = "Authorization successful";
+                    document.getElementById("authorize_return").innerHTML = "Successful Transaction!";
                }
           }, 3000);
        } else {
@@ -96,12 +95,12 @@ App = {
               document.getElementById("nameofofficialid").value = name;
               document.getElementById("authorize_return").innerHTML = 'Person already authorized';
               document.getElementById("nameofofficialid").disabled = true;
-              document.getElementById("authorize_button").disabled = true;
+              document.getElementById("authorize_button").value = "Unauthorize";
           }else{
               document.getElementById("nameofofficialid").value = '';
               document.getElementById("authorize_return").innerHTML = '';
               document.getElementById("nameofofficialid").disabled = false;
-              document.getElementById("authorize_button").disabled = false;
+              document.getElementById("authorize_button").value = "Authorize";
           }
          });
 

@@ -60,7 +60,7 @@ App = {
         console.log("checkuiqueIdvar2 :", checkuiqueIdvar2);
       });
     });
-  },   
+  },
 
   SetIGMdata_js: function() {
 
@@ -69,11 +69,21 @@ App = {
     console.log("UID temp", uniqueidid);
 
     var billnoid = document.getElementById("billnoid").value;
-    console.log("Confirm button is pressed1");
     var nameofexporterid = document.getElementById("nameofexporterid").value;
-    console.log("Confirm button is pressed2");
+    var commoditydescriptionid = document.getElementById("commoditydescriptionid").value;
+    var countryid = document.getElementById("countryid").value;
+    var nameofoceancarrierid = document.getElementById("nameofoceancarrierid").value;
+    var nameofshipperid = document.getElementById("nameofshipperid").value;
+    var vesselnameid = document.getElementById("vesselnameid").value;
+    var weightofcargoid = document.getElementById("weightofcargoid").value;
+    var containernumberid = document.getElementById("containernumberid").value;
+    var placeofissueid = document.getElementById("placeofissueid").value;
+    var placeofdeliveryid = document.getElementById("placeofdeliveryid").value;
+    var portofloadingid = document.getElementById("portofloadingid").value;
 
-    if(!uniqueidid || !billnoid || !nameofexporterid){
+
+    if(!uniqueidid || !billnoid || !nameofexporterid || !commoditydescriptionid || !countryid || !nameofoceancarrierid || !nameofshipperid || !vesselnameid || !weightofcargoid || !containernumberid || !placeofissueid || !placeofdeliveryid || !portofloadingid){
+    //if(!uniqueidid || !billnoid || !nameofexporterid ){
         document.getElementById("mandatoryid").innerHTML = "* All fields must be filled";
         return false;
     }else{
@@ -83,7 +93,20 @@ App = {
 
     App.contracts.Shipping.deployed().then(function(instance) {
       console.log("Confirm button is pressed3");
-      return  instance.SetIGMdata(uniqueidid, billnoid, nameofexporterid, { from: App.account });
+
+      var datauint = [];
+      datauint.push(parseInt(billnoid),parseInt(weightofcargoid), parseInt(containernumberid));
+      //datauint.push(parseInt(billnoid),parseInt(weightofcargoid));
+
+      var datastring = [];
+      //datastring.push(String(nameofexporterid), String(commoditydescriptionid), String(countryid), String(nameofoceancarrierid), String(nameofshipperid), String(vesselnameid), String(placeofissueid), String(placeofdeliveryid), String(portofloadingid));
+
+       //datastring.push(String(nameofexporterid), String(commoditydescriptionid));
+
+      console.log("DATAUINT : ", datauint);
+      console.log("DATASTRING : ", datastring);
+
+      return  instance.SetIGMdata(uniqueidid, datauint, nameofexporterid, commoditydescriptionid, countryid, nameofoceancarrierid, nameofshipperid, vesselnameid, placeofissueid, placeofdeliveryid, portofloadingid, { from: App.account });
     }).catch(function(err) {
       console.log("Confirm button is pressed5");
       console.error(err);
@@ -145,27 +168,26 @@ App = {
        }
     });
 
-
   },
 
    getStoredValues_js: function(_uniqueid) {
 
-      App.contracts.Shipping.deployed().then(function(instance) {
-          console.log("Render instance deployed");
-          return  instance.datamapping(_uniqueid);
-      }).then(function(data) {
 
-          var isgenerated_tmp = data[0];
-          console.log("isgenerated_tmp", isgenerated_tmp);
-          if(isgenerated_tmp){
-              document.getElementById("UniqueIdfield_tmp").innerHTML = "UID Validated";
-          }else{
-              document.getElementById("UniqueIdfield_tmp").innerHTML = "Invalid UID";
-          }
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.databoolmapping(_uniqueid,0)
+        }).then(function(isgenerated_tmp){
+           console.log("isgenerated_tmp7777", isgenerated_tmp);
+           if(isgenerated_tmp == true){
+               console.log("yoyoyo");
+               document.getElementById("UniqueIdfield_tmp").innerHTML = "UID Validated";
+           }else{
+               document.getElementById("UniqueIdfield_tmp").innerHTML = "Invalid UID";
+           }
+        });
 
-          var billno_tmp = data[1].c[0];
-          console.log("billno_tmp", billno_tmp);
-          if(billno_tmp){
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datauintmapping(_uniqueid,0)
+        }).then(function(billno_tmp){
+           console.log("billno_tmp", billno_tmp);
+          if(billno_tmp != 0){
               console.log("billno_tmp", billno_tmp);
               document.getElementById("billnoid").value = billno_tmp;
               document.getElementById("billnoid").disabled = true;
@@ -173,12 +195,12 @@ App = {
               document.getElementById("billnoid").value = '';
               document.getElementById("billnoid").disabled = false;
           }
+        });
 
-
-          var nameofexporter_tmp = data[2];
-          console.log("nameofexporter", nameofexporter_tmp);
-
-          if(nameofexporter_tmp){
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,0)
+        }).then(function(nameofexporter_tmp){
+           console.log("nameofexporter_tmp", nameofexporter_tmp);
+          if(nameofexporter_tmp != 0){
               console.log("nameofexporter_tmp", nameofexporter_tmp);
               document.getElementById("nameofexporterid").value = nameofexporter_tmp;
               document.getElementById("nameofexporterid").disabled = true;
@@ -186,63 +208,190 @@ App = {
               document.getElementById("nameofexporterid").value = '';
               document.getElementById("nameofexporterid").disabled = false;
           }
+        });
 
-          //****************var nameofexporter_tmp = data[2]; *********// FOR COMMODIT DESCRIPTION
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,1)
+        }).then(function(commoditydescription_tmp){
+           console.log("commoditydescription_tmp", commoditydescription_tmp);
+          if(commoditydescription_tmp != 0){
+              console.log("commoditydescription_tmp", commoditydescription_tmp);
+              document.getElementById("commoditydescriptionid").value = commoditydescription_tmp;
+              document.getElementById("commoditydescriptionid").disabled = true;
+          }else{
+              document.getElementById("commoditydescriptionid").value = '';
+              document.getElementById("commoditydescriptionid").disabled = false;
+          }
+        });
 
-          var IGM_timestamp = data[4].c[0];
-          console.log("IGM_timestamp", IGM_timestamp);
-          console.log("DATA *****", data);
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,2)
+        }).then(function(country_tmp){
+           console.log("country_tmp", country_tmp);
+          if(country_tmp != 0){
+              console.log("country_tmp", country_tmp);
+              document.getElementById("countryid").value = country_tmp;
+              document.getElementById("countryid").disabled = true;
+          }else{
+              document.getElementById("countryid").value = '';
+              document.getElementById("countryid").disabled = false;
+          }
+        });
 
-                if(IGM_timestamp){
-                    console.log("IGM_timestamp", IGM_timestamp);
-                    document.getElementById("sign_button").disabled = true;
-                    document.getElementById("UniqueIdoutput").innerHTML = "The form has been submitted before";
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,3)
+        }).then(function(nameofoceancarrier_tmp){
+           console.log("nameofoceancarrier_tmp", nameofoceancarrier_tmp);
+          if(nameofoceancarrier_tmp != 0){
+              console.log("nameofoceancarrier_tmp", nameofoceancarrier_tmp);
+              document.getElementById("nameofoceancarrierid").value = nameofoceancarrier_tmp;
+              document.getElementById("nameofoceancarrierid").disabled = true;
+          }else{
+              document.getElementById("nameofoceancarrierid").value = '';
+              document.getElementById("nameofoceancarrierid").disabled = false;
+          }
+        });
 
-                }else{
-                    document.getElementById("sign_button").disabled = false;
-                }
-      });
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,4)
+        }).then(function(nameofshipper_tmp){
+           console.log("nameofoceancarrier_tmp", nameofshipper_tmp);
+          if(nameofshipper_tmp != 0){
+              console.log("nameofshipper_tmp", nameofshipper_tmp);
+              document.getElementById("nameofshipperid").value = nameofshipper_tmp;
+              document.getElementById("nameofshipperid").disabled = true;
+          }else{
+              document.getElementById("nameofshipperid").value = '';
+              document.getElementById("nameofshipperid").disabled = false;
+          }
+        });
+
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,5)
+        }).then(function(vesselname_tmp){
+           console.log("vesselname_tmp", vesselname_tmp);
+          if(vesselname_tmp != 0){
+              console.log("vesselname_tmp", vesselname_tmp);
+              document.getElementById("vesselnameid").value = vesselname_tmp;
+              document.getElementById("vesselnameid").disabled = true;
+          }else{
+              document.getElementById("vesselnameid").value = '';
+              document.getElementById("vesselnameid").disabled = false;
+          }
+        });
+
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datauintmapping(_uniqueid,1)
+        }).then(function(weightofcargo_tmp){
+           console.log("weightofcargo_tmp", weightofcargo_tmp);
+          if(weightofcargo_tmp != 0){
+              console.log("weightofcargo_tmp", weightofcargo_tmp);
+              document.getElementById("weightofcargoid").value = weightofcargo_tmp;
+              document.getElementById("weightofcargoid").disabled = true;
+          }else{
+              document.getElementById("weightofcargoid").value = '';
+              document.getElementById("weightofcargoid").disabled = false;
+          }
+        });
+
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datauintmapping(_uniqueid,2)
+        }).then(function(containernumber_tmp){
+           console.log("weightofcargo_tmp", containernumber_tmp);
+          if(containernumber_tmp != 0){
+              console.log("containernumber_tmp", containernumber_tmp);
+              document.getElementById("containernumberid").value = containernumber_tmp;
+              document.getElementById("containernumberid").disabled = true;
+          }else{
+              document.getElementById("containernumberid").value = '';
+              document.getElementById("containernumberid").disabled = false;
+          }
+        });
+
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,6)
+        }).then(function(placeofissue_tmp){
+           console.log("placeofissue_tmp", placeofissue_tmp);
+          if(placeofissue_tmp != 0){
+              console.log("placeofissue_tmp", placeofissue_tmp);
+              document.getElementById("placeofissueid").value = placeofissue_tmp;
+              document.getElementById("placeofissueid").disabled = true;
+          }else{
+              document.getElementById("placeofissueid").value = '';
+              document.getElementById("placeofissueid").disabled = false;
+          }
+        });
+
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,7)
+        }).then(function(placeofdelivery_tmp){
+           console.log("placeofdelivery_tmp", placeofdelivery_tmp);
+          if(placeofdelivery_tmp != 0){
+              console.log("placeofdelivery_tmp", placeofdelivery_tmp);
+              document.getElementById("placeofdeliveryid").value = placeofdelivery_tmp;
+              document.getElementById("placeofdeliveryid").disabled = true;
+          }else{
+              document.getElementById("placeofdeliveryid").value = '';
+              document.getElementById("placeofdeliveryid").disabled = false;
+          }
+        });
+
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datastringmapping(_uniqueid,8)
+        }).then(function(portofloading_tmp){
+           console.log("portofloading_tmp", portofloading_tmp);
+          if(portofloading_tmp != 0){
+              console.log("portofloadingid", portofloading_tmp);
+              document.getElementById("portofloadingid").value = portofloading_tmp;
+              document.getElementById("portofloadingid").disabled = true;
+          }else{
+              document.getElementById("portofloadingid").value = '';
+              document.getElementById("portofloadingid").disabled = false;
+          }
+        });
+
+        App.contracts.Shipping.deployed().then(function(instance){ return instance.datatimestampmapping(_uniqueid,0)
+        }).then(function(IGM_timestamp){
+            console.log("IGM_timestamp", IGM_timestamp);
+            if(IGM_timestamp != 0){
+                console.log("IGM_timestamp", IGM_timestamp);
+                document.getElementById("sign_button").disabled = true;
+                document.getElementById("UniqueIdoutput").innerHTML = "The form has been submitted before";
+
+            }else{
+                document.getElementById("sign_button").disabled = false;
+            }
+        });
+
 
    },
 
 
       getStoredUID_js: function(_uniqueid) {
-         var election_instance;
-         App.contracts.Shipping.deployed().then(function(instance) {
-             console.log("Render instance deployed");
-             election_instance = instance
-             return election_instance}).then(function(instance){
-             return instance.datamapping(_uniqueid);
-         }).then(function(data) {
 
-             var isgenerated_tmp = data[0];
-             console.log("isgenerated_tmp", isgenerated_tmp);
-             if(isgenerated_tmp){
-                 document.getElementById("UniqueIdfield_tmp2").innerHTML = "UID Validated";
-             }else{
-                 document.getElementById("UniqueIdfield_tmp2").innerHTML = "Invalid UID";
-             }
-
-             var IGM_signed_official_address = data[5];
-             console.log("IGM_signed_official_address", IGM_signed_official_address);
-             if(IGM_signed_official_address){
-                 election_instance.IGM_officials(IGM_signed_official_address).then(function(IGM_officials){
-                 IGM_official_name_tmp = IGM_officials[0];
-                 console.log("IGM_official_name_tmp", IGM_official_name_tmp);
-                 document.getElementById("nameofofficialid").value = IGM_official_name_tmp;
-                 document.getElementById("contract_status").innerHTML = "The contract is already signed";
-                 document.getElementById("sign_official_button").disabled = true;
-                 });
-                 document.getElementById("nameofofficialid").disabled = true;
-             }else{
-                 document.getElementById("nameofofficialid").innerHTML = "";
-                 document.getElementById("nameofofficialid").disabled = false;
-                 document.getElementById("contract_status").innerHTML = "";
-                 document.getElementById("sign_official_button").disabled = false;
-             }
+         App.contracts.Shipping.deployed().then(function(instance){ return instance.databoolmapping(_uniqueid,0)
+         }).then(function(isgenerated_tmp){
+            console.log("isgenerated_tmp", isgenerated_tmp);
+            if(isgenerated_tmp == true){
+                document.getElementById("UniqueIdfield_tmp2").innerHTML = "UID Validated";
+            }else{
+                document.getElementById("UniqueIdfield_tmp2").innerHTML = "Invalid UID";
+            }
          });
 
-      },
+       App.contracts.Shipping.deployed().then(function(instance){ return instance.dataofficialaddressmapping(_uniqueid,0);
+       }).then(function(IGM_signed_official_address){
+            console.log("IGM_signed_official_address", IGM_signed_official_address);
+
+
+
+            App.contracts.Shipping.deployed().then(function(instance){ return instance.IGM_officials(IGM_signed_official_address)}).then(function(IGM_officials){
+              IGM_official_name_tmp = IGM_officials[0];
+              console.log("IGM_official_name_tmp", IGM_official_name_tmp);
+
+          if(IGM_official_name_tmp){
+              document.getElementById("nameofofficialid").value = IGM_official_name_tmp;
+              document.getElementById("contract_status").innerHTML = "The contract is already signed";
+              document.getElementById("sign_official_button").value = true;
+              document.getElementById("nameofofficialid").disabled = true;
+          }else{
+              document.getElementById("nameofofficialid").innerHTML = "";
+              document.getElementById("contract_status").innerHTML = "";
+              document.getElementById("sign_official_button").disabled = false;
+          }
+        });
+      });
+   },
 
    render: function() {
         web3.eth.getCoinbase(function(err, account) {
@@ -273,5 +422,5 @@ $(function() {
   $(window).load(function() {
     App.init();
   });
-}); 
+});
 
