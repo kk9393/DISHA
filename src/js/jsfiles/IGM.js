@@ -68,6 +68,21 @@ App = {
     var uniqueidid = document.getElementById("uniqueidid").value;
     console.log("UID temp", uniqueidid);
 
+    url = 'http://localhost:3000/track/';
+    url = url.concat('?uid=');
+    url = url.concat(uniqueidid);
+    console.log(url);
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET', url);
+    ourRequest.onload = function(){
+        var ourdata = JSON.parse(ourRequest.responseText);
+        console.log("GET DATA : ", ourdata);
+        var ourdata_latest = ourdata[ourdata.length-1];
+        console.log("GET DATA LATEST: ", ourdata_latest);
+    }
+    ourRequest.send();
+
+
     var billnoid = document.getElementById("billnoid").value;
     var nameofexporterid = document.getElementById("nameofexporterid").value;
     var commoditydescriptionid = document.getElementById("commoditydescriptionid").value;

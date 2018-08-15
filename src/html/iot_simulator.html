@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="../fonts/fontawesome/css/all.css" >
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="map" style="width:49%;height:550px"></div>
+<p>Latitude :</p>
+<p><a id="mylat"></a></p>
+
+<p>Longitude :</p>
+<p><a id="mylong"></a></p>
+
+<a style="color:red">UniqueID of container</a>
+<i><input type="text" name="uid" id="uid" placeholder="Type UID"/> <input class="button" type="button" id="sign_official_button"  value="Attach" onclick="updateUID()"></i>
+
+
+
+<div class="split right" style="background-image: url(../images/cargo.png);background-size: cover;">
+    <div class="centered" >
+        <div style="margin-top:360px;background-color: #dddddd;padding-right:10px;padding-top:5px;width:450px;margin-right:40px">
+            <ul>
+                <p><a style="text-align: center; color:red">IOT DEVICE</a></p>
+                <p><a>UniqueID of container : </a></br><a id = "uid_IOT" style="color:gray"></a></p>
+                <li title="Temperature">
+                    <i>Temperature : </i>
+                    <i><input style="width:100px; height:20px" disabled type="text" name="temp" id="temp"/></i>
+                </li>
+                <li title="Pressure">
+                    <i>Pressure : </i>
+                    <i><input style="width:100px; height:20px" disabled type="text" name="temp" id="pressure"/></i>
+                </li>
+
+            </ul>
+    </div>
+</div>
+
+<script src="../js/jsfiles/iot_simulator.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
