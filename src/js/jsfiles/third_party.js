@@ -49,6 +49,21 @@ App = {
     });
   },
 
+  copyUID_js: function() {
+          /*var copyText = document.getElementById("UID_input");
+          console.log("copyText", copyText);
+          copyText.select();
+          document.execCommand("copy");
+          console.log("Text Copied!!");*/
+            var copyText = document.getElementById("myInput");
+            copyText.disabled = false;
+            copyText.select();
+            document.execCommand("copy");
+            copyText.disabled = true;
+            //alert("Copied the text: " + copyText.value);
+
+  },
+
   generateUID_js: function() {
 
         console.log("Generate UID pressed");
@@ -64,10 +79,14 @@ App = {
     web3.eth.filter('latest', function(error, result){
        if (!error) {
           console.log("********Transaction is confirmed!!!");
-
+//<input type="text" value="Hello World" id="myInput">
           setTimeout(function () {
-          var uidstr1 = "Your Unique ID is :<br> <b>";
-          var uidstr2 = uidstr1.concat(Unique_ID_var, "</b><br>Please keep it safe for future reference");
+          //var uidstr1 = 'Your Unique ID is :<br><form style="margin-left: 250px; margin-right: 250px;"> <b><input disabled type="text" value="';
+          //var uidstr2 = uidstr1.concat(Unique_ID_var, '" id="UID_input"/>  </b> </form> <button style="background-color:gray;border-radius: 4px;" onclick="App.copyUID_js()"><i style="color:white" class="far fa-copy"></i></button><br>Please keep it safe for future reference');
+//<input type="text" value="Hello World" id="myInput">
+          var uidstr1 = '<input disabled style="width:40%;margin-right:20px;" type="text" value="';
+          var abcd = 'Hello world';
+          var uidstr2 = uidstr1.concat(Unique_ID_var,'" id="myInput"><button style="background-color:gray; border-radius: 4px;" onclick="App.copyUID_js()"><i style="color:white" class="far fa-copy"></i></button> </br> <a>UID is generated! Please keep it safe for future reference</a>');
           document.getElementById("showUID").innerHTML = uidstr2;
               }, 3000);
 
@@ -77,13 +96,15 @@ App = {
     });
   },
 
+
+
    render: function() {
      web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
       }
     });
- },
+    },
 
 }
 $(function() {

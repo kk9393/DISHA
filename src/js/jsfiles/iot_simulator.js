@@ -31,7 +31,7 @@ function placeMarker(location) {
 
 
 function IOT_update(){
-       var Temp = (Math.random() * (20 - 18) + 18).toFixed(4);
+       var Temp = (Math.random() * (22 - 18) + 18).toFixed(4);
        console.log("temp", Temp);
        document.getElementById("temp").value = String(Temp);
 

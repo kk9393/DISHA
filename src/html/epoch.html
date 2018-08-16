@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="../libraries/epoch-master/dist/js/epoch.min.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../libraries/epoch-master/dist/css/epoch.min.css">
+</head>
+
+<body style="text-align:center;background-color:#d1d1d1;align:center;">
+
+    <div class="navbar">
+        <p><a href="../index.html"><img src="../images/DISHA_logo.png" alt="DISHA_Logo" style="height:80px;padding-bottom: 10px;" align="middle"></a><a style="margin-left:100px"><a class="navhead" style="color: #db5046">D</a><a class="navhead">ecentralized and </a><a class="navhead" style="color: #db5046">I</a><a class="navhead">ntegrated </a><a class="navhead" style="color: #db5046">Sh</a><a class="navhead">ipping ports </a><a class="navhead" style="color: #db5046">A</a><a class="navhead">dministration</a></a></p>
+    </div>
+
+    <form>
+         <h4 class="topmarginfirst">Enter Unique ID here:</h4>
+
+        <input style="width:40%" type="text" id="uniqueidid" name="uniqueidid" placeholder="Type UID here.."/>
+
+        <input style="width:100px; height:40px" class="button" type="button" onclick="setUID()" value="Submit" > </br>
+
+     </br>
+     </br>
+     </br>
+ 
+    </form>
+
+    <div style="background-color:#ededed" >
+        </br>
+        <p>Real Time Temperature</p>
+        <div id="tempChart" class="epoch center" style="width:80%; height: 240px;"></div>
+        </br>
+    </div>
+    </br>
+    </br>
+    <div style="background-color:#ededed" >
+        </br>
+        <p>Real Time Pressure</p>
+        <div id="pressureChart" class="epoch gauge-medium center" style="width:80%; height: 240px;"></div>
+        </br>
+    </div>
+    </br>
+    </br>
+<script src = "../js/jsfiles/epoch.js"></script>
+</body>
+</html>

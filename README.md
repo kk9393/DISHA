@@ -19,9 +19,10 @@ DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 c
 2. Run Ganache
 3. login to Metamask and add custom RPC with same host as Ganache (Most probably : http://localhost:7545)
 4. Import Ganache Ethereum accounts into Metamask by using private key
-4. Go to current directory in terminal and type :
-5. $ truffle migrate --reset
-6. $ npm run dev
+5. Go to truffle.js and change the address 'from : ***********' to one of the accounts in Ganache. That will be the Authority of the project.
+6. Go to current directory in terminal and type :
+7. $ truffle migrate --reset
+8. $ npm run dev
 
 For realtime data tracking:
 1. $ npm install -g json-server

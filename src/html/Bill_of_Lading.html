@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="text-align:center;background-color:#d1d1d1;">
+
+<div class="navbar">
+    <p><a href="../index.html"><img src="../images/DISHA_logo.png" alt="DISHA_Logo" style="height:80px;padding-top: 10px;" align="middle"></a><a style="margin-left:100px"><a class="navhead" style="color: #db5046">D</a><a class="navhead">ecentralized and </a><a class="navhead" style="color: #db5046">I</a><a class="navhead">ntegrated </a><a class="navhead" style="color: #db5046">Sh</a><a class="navhead">ipping ports </a><a class="navhead" style="color: #db5046">A</a><a class="navhead">dministration</a></a></p>
+</div>
+
+
+<p style="font-size: 20px;"><b>Bill of Lading</b></p>
+
+
+
+
+<div class="container">
+    <form style="margin-left: 150px; margin-right: 150px;" id="myform" runat="server">
+
+        <!-- address _uniqueId, uint[] datauint, string _nameofimporter,
+    string _nameofexporter, string _commoditydescription, string _country,
+    string _nameofoceancarrier, string _vesselname, string _portofloading, string _placeofdelivery
+         weightofcargo-->
+
+        <label for="uniqueidid">Unique ID</label>
+        <input type="text" id="uniqueidid" name="uniqueidid" placeholder="Type Unique ID here.." />
+        <p><a align ="center" id="UniqueIdfield_tmp"></a></p>
+        <br>
+
+        <label for="nameofimporterid"> Name of Importer</label>
+        <input type="text" id="nameofimporterid" name="nameofimporterid" placeholder="Type name of importer here.."/>
+
+        <label for="nameofexporterid"> Name of Exporter</label>
+        <input type="text" id="nameofexporterid" name="nameofexporterid" placeholder="Type name of exporter here.."/>
+
+        <label for="commoditydescriptionid">Commodity Description</label>
+        <textarea id="commoditydescriptionid" name="commoditydescriptionid" placeholder="Type description of commodity here.." style="height:150px"></textarea>
+
+        <label for="countryid">Country</label>
+        <input type="text" id="countryid" name="countryid" placeholder="Type name of country here.."/>
+
+        <label for="nameofoceancarrierid">Name of Ocean Carrier</label>
+        <input type="text" id="nameofoceancarrierid" name="nameofoceancarrierid" placeholder="Type name of ocean carrier here.."/>
+
+        <label for="vesselnameid">Vessel Name</label>
+        <input type="text" id="vesselnameid" name="vesselnameid" placeholder="Type vessel name here.."/>
+
+        <label for="weightofcargoid">Weight of Cargo</label>
+        <input type="integer" id="weightofcargoid" name="weightofcargoid" placeholder="Type weight of cargo here.."/>
+
+        <label for="portofloadingid">Port of Loading</label>
+        <input type="text" id="portofloadingid" name="portofloadingid" placeholder="Type port of loading here.."/>
+
+        <label for="placeofdeliveryid">Port of Delivery</label>
+        <input type="text" id="placeofdeliveryid" name="placeofdeliveryid" placeholder="Type place of delivery here.."/>
+
+        <br>
+        <br>
+        <p style="margin-top: 20px"><a align ="center" style="color:red" id="mandatoryid"></a></p>
+        <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="UniqueIdoutput"></a></p>
+
+        <br>
+        <input class="button" type="button" id="sign_button"  value="Sign" onclick="return App.SetBillofLadingdata_js();">
+    </form>
+</div>
+
+<div class="container topmarginhomepagebutton">
+    <form style="margin-left: 150px; margin-right: 150px;" id="officialform" runat="server">
+        <p style="margin-top: 20px"><a align ="center" style="color:red">FOR OFFICIAL USE ONLY</a></p>
+        <br>
+
+        <label for="uniqueidid2">Unique ID</label>
+        <input type="text" id="uniqueidid2" name="uniqueidid2" placeholder="Type Unique ID here.." />
+        <p ><a align ="center" id="UniqueIdfield_tmp2"></a></p>
+        <br>
+
+        <label for="nameofofficialid"> Name of signed Official</label>
+        <input disabled type="text" id="nameofofficialid" name="nameofofficialid" placeholder="Name of signed official will be shown here.."/>
+        <br>
+        <p style="margin-top: 20px"><a align ="center" style="color:red" id="mandatoryid2"></a></p>
+        <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="UniqueIdoutput2"></a></p>
+        <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="contract_status"></a></p>
+        <input class="button" type="button" id="sign_official_button"  value="Sign" onclick="return App.signBillofLading_official_js();">
+    </form>
+</div>
+<br>
+<br>
+<br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/web3.min.js"></script>
+<script src="../js/truffle-contract.js"></script>
+<script src="../js/jsfiles/Bill_of_Lading.js"></script>
+
+</body>
+</html>

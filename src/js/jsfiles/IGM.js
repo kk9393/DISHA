@@ -1,5 +1,4 @@
 var checkuiqueIdvar;
-var checkuiqueIdvar2;
 
 App = {
   web3Provider: null,
@@ -48,18 +47,6 @@ App = {
         console.log("checkuiqueIdvar :", checkuiqueIdvar);
       });
     });
-
-    App.contracts.Shipping.deployed().then(function(instance) {
-      console.log("UniqueId is generated1", event);
-      instance.CheckIGMofficialverificationEvent({}, {
-        fromBlock: 'latest',
-        toBlock: 'latest'
-      }).watch(function(error, event) {
-        console.log("UniqueId is generated2", event);
-        checkuiqueIdvar2 = event.args._isIGMofficialverified;
-        console.log("checkuiqueIdvar2 :", checkuiqueIdvar2);
-      });
-    });
   },
 
   SetIGMdata_js: function() {
@@ -67,7 +54,7 @@ App = {
     console.log("Confirm button is pressed0");
     var uniqueidid = document.getElementById("uniqueidid").value;
     console.log("UID temp", uniqueidid);
-
+/*
     url = 'http://localhost:3000/track/';
     url = url.concat('?uid=');
     url = url.concat(uniqueidid);
@@ -81,7 +68,7 @@ App = {
         console.log("GET DATA LATEST: ", ourdata_latest);
     }
     ourRequest.send();
-
+*/
 
     var billnoid = document.getElementById("billnoid").value;
     var nameofexporterid = document.getElementById("nameofexporterid").value;
@@ -169,13 +156,9 @@ App = {
     web3.eth.filter('latest', function(error, result){
        if (!error) {
           setTimeout(function () {
-                 if(checkuiqueIdvar2 ==true){
-                    console.log("checkuiqueIdvar check", checkuiqueIdvar2);
-                    document.getElementById("UniqueIdoutput2").innerHTML = "Your form is submitted and digitally signed successfully";
-                 }else{
-                    console.log("checkuiqueIdvar check", checkuiqueIdvar2);
-                    document.getElementById("UniqueIdoutput2").innerHTML = "Failed to sign";
-                }
+                console.log("checkuiqueIdvar check", checkuiqueIdvar2);
+                document.getElementById("UniqueIdoutput2").innerHTML = "Your form is submitted and digitally signed successfully";
+
               }, 3000);
        } else {
           document.getElementById("UniqueIdoutput2").innerHTML = "Failed to sign the contract";

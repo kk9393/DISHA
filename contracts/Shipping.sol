@@ -1,5 +1,6 @@
 pragma solidity ^0.4.24;
 pragma experimental ABIEncoderV2;
+
 contract Shipping{
 
 ///////////////////////////STRUCT, VARIABLES AND MAPPINGS///////////////////////
@@ -7,25 +8,51 @@ contract Shipping{
     address Owner;
 
     mapping (address => bool[30]) public databoolmapping;
-    // isgenerated =0; isIGMcreated = 1; isIGMverified = 2;
+    // isgenerated =0; isIGMcreated = 1; isIGMverified = 2; isBillofEntrycreated = 3;
+    //isBillofEntryverified = 4; isBillofLadingcreated = 5; isBillofLadingverified = 6;
     mapping (address => uint[20]) public datatimestampmapping;
-    // IGM_timestamp = 0;
+    // IGMgeneration_timestamp = 0; IGMverefication_timestamp = 1;
+    //BillofEntrygeneration_timestamp = 2; BillofEntryverification_timestamp = 3
+    //BillofLading_timestamp = 4;
     mapping (address => address[20]) public dataofficialaddressmapping;
-    //IGM_official_address = 0;
+    //IGM_official_address = 0; BillofEntry_official_address = 1; BillofLading_official_address = 2;
     mapping (address => string[40]) public datastringmapping;
     // nameofexporter = 0; commoditydescription = 1; country = 2; nameofoceancarrier = 3
     // nameofshipper = 4; vesselname = 5; placeofissue = 6; placeofdelivery = 7;
-    // portofloading = 8
+    // portofloading = 8; nameofimporter = 9;
     mapping (address => uint[40]) public datauintmapping;
-    // billno = 0; weightofcargo = 1; containernumber = 2;
+    // billno = 0; weightofcargo = 1; containernumber = 2; custom_duty = 3; cha_code = 4; GST = 5;
 
     struct IGM_officialsStruct {
         string name;
         bool isauthorized;
     }
 
-    mapping (address => IGM_officialsStruct) public IGM_officials;
+    struct BillofEntry_officialsStruct {
+        string name;
+        bool isauthorized;
+    }
 
+    struct BillofLading_officialsStruct {
+        string name;
+        bool isauthorized;
+    }
+
+    struct customs_officialsStruct {
+        string name;
+        bool isauthorized;
+    }
+
+    struct shed_officialsStruct {
+        string name;
+        bool isauthorized;
+    }
+
+    mapping (address => IGM_officialsStruct) public IGM_officials;
+    mapping (address => BillofEntry_officialsStruct) public BillofEntry_officials;
+    mapping (address => BillofLading_officialsStruct) public BillofLading_officials;
+    mapping (address => customs_officialsStruct) public customs_officials;
+    mapping (address => shed_officialsStruct) public shed_officials;
 
 /////////////////////////STRUCT, VARIABLES AND MAPPINGS END//////////////////////
 
@@ -34,8 +61,6 @@ contract Shipping{
     event GetUniqueIdEvent(address indexed _uniqueId);
 
     event CheckUniqueIdEvent(bool indexed _isgenerated);
-
-    event CheckIGMofficialverificationEvent(bool indexed _isIGMofficialverified);
 
 ///////////////////////////////////EVENTS END////////////////////////////////////
 
@@ -92,19 +117,20 @@ contract Shipping{
             throw;
             return "IGM already created with this UID";
         }
-        datauintmapping[_uniqueId][0] = datauint[0];
-        datauintmapping[_uniqueId][1] = datauint[1];
-        datauintmapping[_uniqueId][2] = datauint[2];
+        if(datauintmapping[_uniqueId][0] == 0){datauintmapping[_uniqueId][0] = datauint[0];}
+        if(datauintmapping[_uniqueId][1] == 0){datauintmapping[_uniqueId][1] = datauint[1];}
+        if(datauintmapping[_uniqueId][2] == 0){datauintmapping[_uniqueId][2] = datauint[2];}
 
-        datastringmapping[_uniqueId][0] = _nameofexporter;
-        datastringmapping[_uniqueId][1] = _commoditydescription;
-        datastringmapping[_uniqueId][2] = _country;
-        datastringmapping[_uniqueId][3] = _nameofoceancarrier;
-        datastringmapping[_uniqueId][4] = _nameofshipper;
-        datastringmapping[_uniqueId][5] = _vesselname;
-        datastringmapping[_uniqueId][6] = _placeofissue;
-        datastringmapping[_uniqueId][7] = _placeofdelivery;
-        datastringmapping[_uniqueId][8] = _portofloading;
+        if(bytes(datastringmapping[_uniqueId][0]).length == 0){datastringmapping[_uniqueId][0] = _nameofexporter;}
+        if(bytes(datastringmapping[_uniqueId][1]).length == 0){datastringmapping[_uniqueId][1] = _commoditydescription;}
+        if(bytes(datastringmapping[_uniqueId][2]).length == 0){datastringmapping[_uniqueId][2] = _country;}
+        if(bytes(datastringmapping[_uniqueId][3]).length == 0){datastringmapping[_uniqueId][3] = _nameofoceancarrier;}
+        if(bytes(datastringmapping[_uniqueId][4]).length == 0){datastringmapping[_uniqueId][4] = _nameofshipper;}
+        if(bytes(datastringmapping[_uniqueId][5]).length == 0){datastringmapping[_uniqueId][5] = _vesselname;}
+        if(bytes(datastringmapping[_uniqueId][6]).length == 0){datastringmapping[_uniqueId][6] = _placeofissue;}
+        if(bytes(datastringmapping[_uniqueId][7]).length == 0){datastringmapping[_uniqueId][7] = _placeofdelivery;}
+        if(bytes(datastringmapping[_uniqueId][8]).length == 0){datastringmapping[_uniqueId][8] = _portofloading;}
+
 
         datatimestampmapping[_uniqueId][0] = now;
         databoolmapping[_uniqueId][1] = true;
@@ -125,7 +151,6 @@ contract Shipping{
 
     function sign_IGM (address _uniqueId) returns (string){
         if(!IGM_officials[msg.sender].isauthorized){
-            CheckIGMofficialverificationEvent(false);
             throw;
             return "Person is not authorized";
         }
@@ -139,12 +164,156 @@ contract Shipping{
         }
 
         dataofficialaddressmapping[_uniqueId][0] = msg.sender;
-        CheckIGMofficialverificationEvent(true);
         databoolmapping[_uniqueId][2] = true;
+        datatimestampmapping[_uniqueId][1] = now;
         return "IGM form is signed by official";
     }
 
 ///////////////////////////////IGM FUNCTIONS END//////////////////////////////////
+
+////////////////////////////BILL OF ENTRY FUNCTIONS///////////////////////////////
+
+
+    // billno = 0; weightofcargo = 1; containernumber = 2; custom_duty = 3; cha_code = 4; GST = 5;
+    // nameofexporter = 0; commoditydescription = 1; country = 2; nameofoceancarrier = 3
+    // nameofshipper = 4; vesselname = 5; placeofissue = 6; placeofdelivery = 7;
+    // portofloading = 8 nameofimporter = 9;
+    function SetBillofEntrydata(address _uniqueId, uint[] datauint, string _nameofimporter,
+    string _commoditydescription, string _country, string _nameofoceancarrier,
+    string _vesselname) returns (string){
+        if(!databoolmapping[_uniqueId][0]){
+            CheckUniqueIdEvent(false);
+            throw;
+            return "UID is false!";
+        }
+
+        if(databoolmapping[_uniqueId][3]){
+            throw;
+            return "Bill of Entry already created with this UID";
+        }
+
+        if(datauintmapping[_uniqueId][1] == 0){datauintmapping[_uniqueId][1] = datauint[0];} //weightofcargo
+        if(datauintmapping[_uniqueId][3] == 0){datauintmapping[_uniqueId][3] = datauint[1];} //custom_duty
+        if(datauintmapping[_uniqueId][4] == 0){datauintmapping[_uniqueId][4] = datauint[2];} //cha_code
+        if(datauintmapping[_uniqueId][5] == 0){datauintmapping[_uniqueId][5] = datauint[3];} //GST
+
+        if(bytes(datastringmapping[_uniqueId][9]).length == 0){datastringmapping[_uniqueId][9] = _nameofimporter;}
+        if(bytes(datastringmapping[_uniqueId][1]).length == 0){datastringmapping[_uniqueId][1] = _commoditydescription;}
+        if(bytes(datastringmapping[_uniqueId][2]).length == 0){datastringmapping[_uniqueId][2] = _country;}
+        if(bytes(datastringmapping[_uniqueId][3]).length == 0){datastringmapping[_uniqueId][3] = _nameofoceancarrier;}
+        if(bytes(datastringmapping[_uniqueId][5]).length == 0){datastringmapping[_uniqueId][5] = _vesselname;}
+
+        datatimestampmapping[_uniqueId][2] = now;
+        databoolmapping[_uniqueId][3] = true;
+        CheckUniqueIdEvent(true);
+        return "UID is true!";
+    }
+
+    function authorize_Bill_of_Entry(address _address, string _name) onlyOwner returns(string) {
+        if(!BillofEntry_officials[_address].isauthorized){
+            BillofEntry_officials[_address].isauthorized = true;
+            BillofEntry_officials[_address].name = _name;
+            return "BillofEntry official authorized";
+        }else{
+            BillofEntry_officials[_address].isauthorized = false;
+            return "BillofEntry official unauthorized";
+        }
+    }
+
+    function sign_Bill_of_Entry(address _uniqueId) returns (string){
+        if(!BillofEntry_officials[msg.sender].isauthorized){
+            throw;
+            return "Person is not authorized";
+        }
+        if(databoolmapping[_uniqueId][4]){
+            throw;
+            return "BillofEntry with this UID is already verified";
+        }
+        if(!databoolmapping[_uniqueId][0]){
+            throw;
+            return "UID is false!";
+        }
+
+        dataofficialaddressmapping[_uniqueId][1] = msg.sender;
+        databoolmapping[_uniqueId][4] = true;
+        datatimestampmapping[_uniqueId][3] = now;
+        return "BillofEntry form is signed by official";
+    }
+
+///////////////////////////BILL OF ENTRY FUNCTIONS END///////////////////////////
+
+
+////////////////////////////BILL OF LADING FUNCTIONS///////////////////////////////
+
+    function SetBillofLadingdata(address _uniqueId, uint[] datauint, string _nameofimporter,
+    string _nameofexporter, string _commoditydescription, string _country,
+    string _nameofoceancarrier, string _vesselname, string _portofloading, string _placeofdelivery) returns (string){
+        if(!databoolmapping[_uniqueId][0]){
+            CheckUniqueIdEvent(false);
+            throw;
+            return "UID is false!";
+        }
+
+        if(databoolmapping[_uniqueId][5]){
+            throw;
+            return "Bill of Lading already created with this UID";
+        }
+
+        if(datauintmapping[_uniqueId][1] == 0){datauintmapping[_uniqueId][1] = datauint[0];} //weightofcargo
+
+        if(bytes(datastringmapping[_uniqueId][9]).length == 0){datastringmapping[_uniqueId][9] = _nameofimporter;}
+        if(bytes(datastringmapping[_uniqueId][1]).length == 0){datastringmapping[_uniqueId][1] = _commoditydescription;}
+        if(bytes(datastringmapping[_uniqueId][2]).length == 0){datastringmapping[_uniqueId][2] = _country;}
+        if(bytes(datastringmapping[_uniqueId][3]).length == 0){datastringmapping[_uniqueId][3] = _nameofoceancarrier;}
+        if(bytes(datastringmapping[_uniqueId][5]).length == 0){datastringmapping[_uniqueId][5] = _vesselname;}
+        if(bytes(datastringmapping[_uniqueId][8]).length == 0){datastringmapping[_uniqueId][8] = _portofloading;}
+        if(bytes(datastringmapping[_uniqueId][7]).length == 0){datastringmapping[_uniqueId][7] = _placeofdelivery;}
+        if(bytes(datastringmapping[_uniqueId][0]).length == 0){datastringmapping[_uniqueId][0] = _nameofexporter;}
+
+        datatimestampmapping[_uniqueId][4] = now;
+        databoolmapping[_uniqueId][5] = true;
+        CheckUniqueIdEvent(true);
+        return "UID is true!";
+    }
+
+    //IGM_official_address = 0; BillofEntry_official_address = 1; BillofLading_official_address = 2;
+
+    // IGMgeneration_timestamp = 0; IGMverefication_timestamp = 1;
+    //BillofEntrygeneration_timestamp = 2; BillofEntryverification_timestamp = 3
+    //BillofLadinggeneration_timestamp = 4; BillofLadingverification_timestamp = 5
+
+    // isgenerated =0; isIGMcreated = 1; isIGMverified = 2; isBillofEntrycreated = 3;
+    //isBillofEntryverified = 4; isBillofLadingcreated = 5; isBillofLadingverified = 6;
+
+    // billno = 0; weightofcargo = 1; containernumber = 2; custom_duty = 3; cha_code = 4; GST = 5;
+
+    // nameofexporter = 0; commoditydescription = 1; country = 2; nameofoceancarrier = 3
+    // nameofshipper = 4; vesselname = 5; placeofissue = 6; placeofdelivery = 7;
+    // portofloading = 8 nameofimporter = 9;
+
+    function sign_Bill_of_Lading(address _uniqueId) returns (string){
+       /* if(!BillofEntry_officials[msg.sender].isauthorized){
+            throw;
+            return "Person is not authorized";
+        }*/
+        if(databoolmapping[_uniqueId][6]){
+            throw;
+            return "BillofEntry with this UID is already verified";
+        }
+        if(!databoolmapping[_uniqueId][0]){
+            throw;
+            return "UID is false!";
+        }
+
+        dataofficialaddressmapping[_uniqueId][2] = msg.sender;
+        databoolmapping[_uniqueId][6] = true;
+        datatimestampmapping[_uniqueId][5] = now;
+        return "BillofEntry form is signed by official";
+    }
+
+///////////////////////////BILL OF LADING FUNCTIONS END///////////////////////////
+
+
 
 }
 
