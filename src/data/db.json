@@ -55008,6 +55008,1581 @@
       "temperature": "19.3822",
       "pressure": "101.0014",
       "id": 7847
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422438,
+      "temperature": "20.0064",
+      "pressure": "100.9581",
+      "id": 7848
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422439,
+      "temperature": "19.6988",
+      "pressure": "101.1309",
+      "id": 7849
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422440,
+      "temperature": "18.9974",
+      "pressure": "101.2683",
+      "id": 7850
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422441,
+      "temperature": "19.5345",
+      "pressure": "101.2471",
+      "id": 7851
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422442,
+      "temperature": "20.5272",
+      "pressure": "101.3948",
+      "id": 7852
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422444,
+      "temperature": "20.4015",
+      "pressure": "101.2508",
+      "id": 7853
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422445,
+      "temperature": "19.4665",
+      "pressure": "101.1643",
+      "id": 7854
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422445,
+      "temperature": "21.0595",
+      "pressure": "101.0397",
+      "id": 7855
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422446,
+      "temperature": "19.7377",
+      "pressure": "101.0658",
+      "id": 7856
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422447,
+      "temperature": "18.5838",
+      "pressure": "101.4530",
+      "id": 7857
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422449,
+      "temperature": "21.7084",
+      "pressure": "101.1607",
+      "id": 7858
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422449,
+      "temperature": "20.3355",
+      "pressure": "101.2853",
+      "id": 7859
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422450,
+      "temperature": "19.8967",
+      "pressure": "101.0693",
+      "id": 7860
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422452,
+      "temperature": "19.5827",
+      "pressure": "101.1581",
+      "id": 7861
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422452,
+      "temperature": "20.2512",
+      "pressure": "100.9740",
+      "id": 7862
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422453,
+      "temperature": "19.9465",
+      "pressure": "101.2582",
+      "id": 7863
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422454,
+      "temperature": "20.3189",
+      "pressure": "101.1649",
+      "id": 7864
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422455,
+      "temperature": "18.3758",
+      "pressure": "101.0974",
+      "id": 7865
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422456,
+      "temperature": "20.8963",
+      "pressure": "101.2833",
+      "id": 7866
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422457,
+      "temperature": "18.3931",
+      "pressure": "101.2807",
+      "id": 7867
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422458,
+      "temperature": "18.4830",
+      "pressure": "101.2429",
+      "id": 7868
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422460,
+      "temperature": "18.9031",
+      "pressure": "101.1279",
+      "id": 7869
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422460,
+      "temperature": "21.1522",
+      "pressure": "101.1815",
+      "id": 7870
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422462,
+      "temperature": "21.1647",
+      "pressure": "101.4510",
+      "id": 7871
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422462,
+      "temperature": "19.4379",
+      "pressure": "100.9507",
+      "id": 7872
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422463,
+      "temperature": "20.6024",
+      "pressure": "101.3465",
+      "id": 7873
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422464,
+      "temperature": "18.7965",
+      "pressure": "101.0342",
+      "id": 7874
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422465,
+      "temperature": "19.8277",
+      "pressure": "101.1988",
+      "id": 7875
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422466,
+      "temperature": "21.2677",
+      "pressure": "101.4395",
+      "id": 7876
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422467,
+      "temperature": "18.2613",
+      "pressure": "101.0373",
+      "id": 7877
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422468,
+      "temperature": "20.3103",
+      "pressure": "101.2727",
+      "id": 7878
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422469,
+      "temperature": "18.2627",
+      "pressure": "101.2607",
+      "id": 7879
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422470,
+      "temperature": "18.3509",
+      "pressure": "101.3096",
+      "id": 7880
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422471,
+      "temperature": "21.2019",
+      "pressure": "101.2847",
+      "id": 7881
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422472,
+      "temperature": "20.6299",
+      "pressure": "101.3233",
+      "id": 7882
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422473,
+      "temperature": "20.1620",
+      "pressure": "101.3563",
+      "id": 7883
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422474,
+      "temperature": "21.5780",
+      "pressure": "101.4611",
+      "id": 7884
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422475,
+      "temperature": "18.2286",
+      "pressure": "101.4979",
+      "id": 7885
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422477,
+      "temperature": "18.2841",
+      "pressure": "101.2702",
+      "id": 7886
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422477,
+      "temperature": "20.5777",
+      "pressure": "101.1647",
+      "id": 7887
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422478,
+      "temperature": "19.5225",
+      "pressure": "101.3470",
+      "id": 7888
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422479,
+      "temperature": "19.0401",
+      "pressure": "101.4932",
+      "id": 7889
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422480,
+      "temperature": "20.9189",
+      "pressure": "101.1482",
+      "id": 7890
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422482,
+      "temperature": "19.2991",
+      "pressure": "101.4072",
+      "id": 7891
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422482,
+      "temperature": "18.5994",
+      "pressure": "100.9657",
+      "id": 7892
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422483,
+      "temperature": "18.9096",
+      "pressure": "101.2578",
+      "id": 7893
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422484,
+      "temperature": "21.1142",
+      "pressure": "101.1467",
+      "id": 7894
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422486,
+      "temperature": "18.1467",
+      "pressure": "101.2508",
+      "id": 7895
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422486,
+      "temperature": "20.6202",
+      "pressure": "101.1206",
+      "id": 7896
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422487,
+      "temperature": "19.0135",
+      "pressure": "101.3878",
+      "id": 7897
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422489,
+      "temperature": "20.8393",
+      "pressure": "101.0156",
+      "id": 7898
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422489,
+      "temperature": "21.9482",
+      "pressure": "101.2530",
+      "id": 7899
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422491,
+      "temperature": "21.0913",
+      "pressure": "101.3786",
+      "id": 7900
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422491,
+      "temperature": "20.3706",
+      "pressure": "101.1515",
+      "id": 7901
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422492,
+      "temperature": "20.7382",
+      "pressure": "101.2884",
+      "id": 7902
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422493,
+      "temperature": "20.1755",
+      "pressure": "101.3977",
+      "id": 7903
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422494,
+      "temperature": "21.6363",
+      "pressure": "100.9677",
+      "id": 7904
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422495,
+      "temperature": "19.3388",
+      "pressure": "101.1042",
+      "id": 7905
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422496,
+      "temperature": "21.8872",
+      "pressure": "101.0468",
+      "id": 7906
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422497,
+      "temperature": "21.3127",
+      "pressure": "101.0072",
+      "id": 7907
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422498,
+      "temperature": "19.4560",
+      "pressure": "100.9922",
+      "id": 7908
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422499,
+      "temperature": "19.0845",
+      "pressure": "101.3024",
+      "id": 7909
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422500,
+      "temperature": "21.0787",
+      "pressure": "101.0788",
+      "id": 7910
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422501,
+      "temperature": "20.6241",
+      "pressure": "101.2765",
+      "id": 7911
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422502,
+      "temperature": "20.7383",
+      "pressure": "101.4231",
+      "id": 7912
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422503,
+      "temperature": "20.0669",
+      "pressure": "101.0435",
+      "id": 7913
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422504,
+      "temperature": "20.1123",
+      "pressure": "101.1213",
+      "id": 7914
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422505,
+      "temperature": "21.3105",
+      "pressure": "101.0507",
+      "id": 7915
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422506,
+      "temperature": "21.6099",
+      "pressure": "101.4304",
+      "id": 7916
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422507,
+      "temperature": "19.1612",
+      "pressure": "101.1468",
+      "id": 7917
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422508,
+      "temperature": "21.7401",
+      "pressure": "101.4866",
+      "id": 7918
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422509,
+      "temperature": "19.8033",
+      "pressure": "100.9915",
+      "id": 7919
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422510,
+      "temperature": "18.8641",
+      "pressure": "101.0129",
+      "id": 7920
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422511,
+      "temperature": "20.4852",
+      "pressure": "101.4796",
+      "id": 7921
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422512,
+      "temperature": "18.4594",
+      "pressure": "101.1544",
+      "id": 7922
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422513,
+      "temperature": "20.3859",
+      "pressure": "101.1439",
+      "id": 7923
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422515,
+      "temperature": "21.7437",
+      "pressure": "101.4207",
+      "id": 7924
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422515,
+      "temperature": "19.3673",
+      "pressure": "101.0781",
+      "id": 7925
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422516,
+      "temperature": "20.2952",
+      "pressure": "101.4652",
+      "id": 7926
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422517,
+      "temperature": "20.1713",
+      "pressure": "101.0999",
+      "id": 7927
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422518,
+      "temperature": "19.4074",
+      "pressure": "100.9554",
+      "id": 7928
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422519,
+      "temperature": "19.6768",
+      "pressure": "101.4588",
+      "id": 7929
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422520,
+      "temperature": "18.2049",
+      "pressure": "101.2129",
+      "id": 7930
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422522,
+      "temperature": "20.0093",
+      "pressure": "101.2115",
+      "id": 7931
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422522,
+      "temperature": "18.2195",
+      "pressure": "100.9666",
+      "id": 7932
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422524,
+      "temperature": "20.7778",
+      "pressure": "101.2000",
+      "id": 7933
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422524,
+      "temperature": "19.6757",
+      "pressure": "101.1637",
+      "id": 7934
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422525,
+      "temperature": "18.3265",
+      "pressure": "101.0365",
+      "id": 7935
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422526,
+      "temperature": "19.0500",
+      "pressure": "101.3302",
+      "id": 7936
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422527,
+      "temperature": "18.8067",
+      "pressure": "101.3692",
+      "id": 7937
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422529,
+      "temperature": "18.9633",
+      "pressure": "101.2290",
+      "id": 7938
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422529,
+      "temperature": "20.0748",
+      "pressure": "101.0760",
+      "id": 7939
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422530,
+      "temperature": "19.7942",
+      "pressure": "101.0692",
+      "id": 7940
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422531,
+      "temperature": "19.2768",
+      "pressure": "101.2637",
+      "id": 7941
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422532,
+      "temperature": "19.5504",
+      "pressure": "101.4111",
+      "id": 7942
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422534,
+      "temperature": "19.9102",
+      "pressure": "101.0455",
+      "id": 7943
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422534,
+      "temperature": "20.5698",
+      "pressure": "101.0055",
+      "id": 7944
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422536,
+      "temperature": "21.9154",
+      "pressure": "101.3973",
+      "id": 7945
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422536,
+      "temperature": "20.0170",
+      "pressure": "101.0616",
+      "id": 7946
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422537,
+      "temperature": "18.6401",
+      "pressure": "101.3681",
+      "id": 7947
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422538,
+      "temperature": "21.4645",
+      "pressure": "100.9636",
+      "id": 7948
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422539,
+      "temperature": "18.0867",
+      "pressure": "101.4329",
+      "id": 7949
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422541,
+      "temperature": "18.7264",
+      "pressure": "101.0517",
+      "id": 7950
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422541,
+      "temperature": "20.7406",
+      "pressure": "101.3570",
+      "id": 7951
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422542,
+      "temperature": "21.4343",
+      "pressure": "101.3393",
+      "id": 7952
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422543,
+      "temperature": "20.2780",
+      "pressure": "101.0770",
+      "id": 7953
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422544,
+      "temperature": "19.8552",
+      "pressure": "101.0354",
+      "id": 7954
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422545,
+      "temperature": "19.1290",
+      "pressure": "101.3581",
+      "id": 7955
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422546,
+      "temperature": "20.5317",
+      "pressure": "101.3735",
+      "id": 7956
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422548,
+      "temperature": "21.1788",
+      "pressure": "100.9705",
+      "id": 7957
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422548,
+      "temperature": "18.6613",
+      "pressure": "101.3031",
+      "id": 7958
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422549,
+      "temperature": "18.4903",
+      "pressure": "101.1480",
+      "id": 7959
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422550,
+      "temperature": "20.3801",
+      "pressure": "101.3938",
+      "id": 7960
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422552,
+      "temperature": "18.5339",
+      "pressure": "101.2449",
+      "id": 7961
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422552,
+      "temperature": "20.7164",
+      "pressure": "101.1311",
+      "id": 7962
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422553,
+      "temperature": "20.1231",
+      "pressure": "101.2087",
+      "id": 7963
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422555,
+      "temperature": "21.4926",
+      "pressure": "101.0159",
+      "id": 7964
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422555,
+      "temperature": "20.9310",
+      "pressure": "101.2718",
+      "id": 7965
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422556,
+      "temperature": "19.4329",
+      "pressure": "101.1569",
+      "id": 7966
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422557,
+      "temperature": "20.2287",
+      "pressure": "100.9874",
+      "id": 7967
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422558,
+      "temperature": "21.8111",
+      "pressure": "101.1181",
+      "id": 7968
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422559,
+      "temperature": "19.4850",
+      "pressure": "101.4155",
+      "id": 7969
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422560,
+      "temperature": "18.5452",
+      "pressure": "101.4725",
+      "id": 7970
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422561,
+      "temperature": "20.0240",
+      "pressure": "101.1948",
+      "id": 7971
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422562,
+      "temperature": "19.7639",
+      "pressure": "101.0219",
+      "id": 7972
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422563,
+      "temperature": "21.6911",
+      "pressure": "101.3727",
+      "id": 7973
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422565,
+      "temperature": "18.1475",
+      "pressure": "101.0496",
+      "id": 7974
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422565,
+      "temperature": "21.4706",
+      "pressure": "101.2208",
+      "id": 7975
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422566,
+      "temperature": "18.4797",
+      "pressure": "101.0368",
+      "id": 7976
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422567,
+      "temperature": "20.8237",
+      "pressure": "101.3605",
+      "id": 7977
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422568,
+      "temperature": "19.7453",
+      "pressure": "101.3915",
+      "id": 7978
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422569,
+      "temperature": "18.5222",
+      "pressure": "101.2924",
+      "id": 7979
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422571,
+      "temperature": "21.4249",
+      "pressure": "101.3531",
+      "id": 7980
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422571,
+      "temperature": "21.3824",
+      "pressure": "101.3654",
+      "id": 7981
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422572,
+      "temperature": "19.9428",
+      "pressure": "101.2912",
+      "id": 7982
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422573,
+      "temperature": "18.4497",
+      "pressure": "101.3149",
+      "id": 7983
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422574,
+      "temperature": "18.8130",
+      "pressure": "101.1937",
+      "id": 7984
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422575,
+      "temperature": "19.4272",
+      "pressure": "101.3181",
+      "id": 7985
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422577,
+      "temperature": "21.5006",
+      "pressure": "101.4793",
+      "id": 7986
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422577,
+      "temperature": "18.6129",
+      "pressure": "101.1554",
+      "id": 7987
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422579,
+      "temperature": "21.3731",
+      "pressure": "101.0174",
+      "id": 7988
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422579,
+      "temperature": "19.5712",
+      "pressure": "101.4293",
+      "id": 7989
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422580,
+      "temperature": "18.9732",
+      "pressure": "101.1972",
+      "id": 7990
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422581,
+      "temperature": "19.0643",
+      "pressure": "101.4035",
+      "id": 7991
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422582,
+      "temperature": "18.6362",
+      "pressure": "101.1403",
+      "id": 7992
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422583,
+      "temperature": "21.8669",
+      "pressure": "101.0971",
+      "id": 7993
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422585,
+      "temperature": "20.7017",
+      "pressure": "101.0559",
+      "id": 7994
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422585,
+      "temperature": "19.2108",
+      "pressure": "101.1139",
+      "id": 7995
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422586,
+      "temperature": "18.1922",
+      "pressure": "101.0390",
+      "id": 7996
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422587,
+      "temperature": "20.4173",
+      "pressure": "101.2514",
+      "id": 7997
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422588,
+      "temperature": "21.4034",
+      "pressure": "101.1456",
+      "id": 7998
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422589,
+      "temperature": "21.6863",
+      "pressure": "101.3690",
+      "id": 7999
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422590,
+      "temperature": "20.5922",
+      "pressure": "101.1308",
+      "id": 8000
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422591,
+      "temperature": "20.8967",
+      "pressure": "101.2408",
+      "id": 8001
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422592,
+      "temperature": "18.1312",
+      "pressure": "101.1804",
+      "id": 8002
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422593,
+      "temperature": "18.4615",
+      "pressure": "101.0822",
+      "id": 8003
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422594,
+      "temperature": "20.4245",
+      "pressure": "100.9645",
+      "id": 8004
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422595,
+      "temperature": "21.7291",
+      "pressure": "101.0945",
+      "id": 8005
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422596,
+      "temperature": "20.8859",
+      "pressure": "101.1962",
+      "id": 8006
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422597,
+      "temperature": "21.1554",
+      "pressure": "101.4793",
+      "id": 8007
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422598,
+      "temperature": "19.0160",
+      "pressure": "101.2071",
+      "id": 8008
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422599,
+      "temperature": "18.5254",
+      "pressure": "101.2619",
+      "id": 8009
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422600,
+      "temperature": "18.1215",
+      "pressure": "101.0910",
+      "id": 8010
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422601,
+      "temperature": "20.4898",
+      "pressure": "101.4290",
+      "id": 8011
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422602,
+      "temperature": "20.2869",
+      "pressure": "101.0428",
+      "id": 8012
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422603,
+      "temperature": "19.4167",
+      "pressure": "101.2071",
+      "id": 8013
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422604,
+      "temperature": "18.3236",
+      "pressure": "100.9829",
+      "id": 8014
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422605,
+      "temperature": "20.7613",
+      "pressure": "101.1344",
+      "id": 8015
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422606,
+      "temperature": "21.9346",
+      "pressure": "101.0979",
+      "id": 8016
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422607,
+      "temperature": "18.4143",
+      "pressure": "100.9663",
+      "id": 8017
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422608,
+      "temperature": "20.1192",
+      "pressure": "101.4994",
+      "id": 8018
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422609,
+      "temperature": "18.5560",
+      "pressure": "101.4990",
+      "id": 8019
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422610,
+      "temperature": "19.4688",
+      "pressure": "100.9687",
+      "id": 8020
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422611,
+      "temperature": "20.2852",
+      "pressure": "101.4024",
+      "id": 8021
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422612,
+      "temperature": "20.1069",
+      "pressure": "101.0259",
+      "id": 8022
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422613,
+      "temperature": "21.0027",
+      "pressure": "101.1812",
+      "id": 8023
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422614,
+      "temperature": "18.5082",
+      "pressure": "101.4648",
+      "id": 8024
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422615,
+      "temperature": "18.2448",
+      "pressure": "101.4429",
+      "id": 8025
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422616,
+      "temperature": "21.5943",
+      "pressure": "100.9793",
+      "id": 8026
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422617,
+      "temperature": "18.7633",
+      "pressure": "101.3206",
+      "id": 8027
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422618,
+      "temperature": "20.1310",
+      "pressure": "101.2084",
+      "id": 8028
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422619,
+      "temperature": "20.1281",
+      "pressure": "101.0274",
+      "id": 8029
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422620,
+      "temperature": "20.5783",
+      "pressure": "100.9902",
+      "id": 8030
+    },
+    {
+      "uid": "xcvg",
+      "time": 1534422621,
+      "temperature": "18.9920",
+      "pressure": "101.4144",
+      "id": 8031
+    },
+    {
+      "uid": "lop",
+      "time": 1534511369,
+      "temperature": "18.8900",
+      "pressure": "101.3914",
+      "id": 8032
+    },
+    {
+      "uid": "lop",
+      "time": 1534511370,
+      "temperature": "21.3939",
+      "pressure": "101.4326",
+      "id": 8033
+    },
+    {
+      "uid": "lop",
+      "time": 1534511372,
+      "temperature": "20.0032",
+      "pressure": "101.0038",
+      "id": 8034
+    },
+    {
+      "uid": "lop",
+      "time": 1534511374,
+      "temperature": "19.7196",
+      "pressure": "101.2528",
+      "id": 8035
+    },
+    {
+      "uid": "lop",
+      "time": 1534511375,
+      "temperature": "18.7767",
+      "pressure": "101.3807",
+      "id": 8036
+    },
+    {
+      "uid": "lop",
+      "time": 1534511376,
+      "temperature": "20.7374",
+      "pressure": "101.3459",
+      "id": 8037
+    },
+    {
+      "uid": "lop",
+      "time": 1534511378,
+      "temperature": "21.1293",
+      "pressure": "101.4956",
+      "id": 8038
+    },
+    {
+      "uid": "lop",
+      "time": 1534511379,
+      "temperature": "20.2297",
+      "pressure": "101.4317",
+      "id": 8039
+    },
+    {
+      "uid": "lop",
+      "time": 1534511380,
+      "temperature": "21.7147",
+      "pressure": "101.1823",
+      "id": 8040
+    },
+    {
+      "uid": "lop",
+      "time": 1534511381,
+      "temperature": "21.7504",
+      "pressure": "101.2130",
+      "id": 8041
+    },
+    {
+      "uid": "lop",
+      "time": 1534511383,
+      "temperature": "21.8592",
+      "pressure": "101.2803",
+      "id": 8042
+    },
+    {
+      "uid": "lop",
+      "time": 1534511384,
+      "temperature": "18.4322",
+      "pressure": "101.4020",
+      "id": 8043
+    },
+    {
+      "uid": "lop",
+      "time": 1534511386,
+      "temperature": "20.4446",
+      "pressure": "101.1662",
+      "id": 8044
+    },
+    {
+      "uid": "lop",
+      "time": 1534511387,
+      "temperature": "18.7576",
+      "pressure": "100.9972",
+      "id": 8045
+    },
+    {
+      "uid": "lop",
+      "time": 1534511389,
+      "temperature": "18.3326",
+      "pressure": "101.0347",
+      "id": 8046
+    },
+    {
+      "uid": "lop",
+      "time": 1534511391,
+      "temperature": "19.2600",
+      "pressure": "101.2467",
+      "id": 8047
+    },
+    {
+      "uid": "lop",
+      "time": 1534511393,
+      "temperature": "18.9798",
+      "pressure": "101.2276",
+      "id": 8048
+    },
+    {
+      "uid": "lop",
+      "time": 1534511395,
+      "temperature": "20.0648",
+      "pressure": "101.4517",
+      "id": 8049
+    },
+    {
+      "uid": "lop",
+      "time": 1534511397,
+      "temperature": "21.0544",
+      "pressure": "100.9809",
+      "id": 8050
+    },
+    {
+      "uid": "lop",
+      "time": 1534511398,
+      "temperature": "19.1769",
+      "pressure": "101.3674",
+      "id": 8051
+    },
+    {
+      "uid": "lop",
+      "time": 1534511400,
+      "temperature": "21.7045",
+      "pressure": "101.4947",
+      "id": 8052
+    },
+    {
+      "uid": "lop",
+      "time": 1534511402,
+      "temperature": "18.8583",
+      "pressure": "101.2149",
+      "id": 8053
+    },
+    {
+      "uid": "lop",
+      "time": 1534511403,
+      "temperature": "21.5796",
+      "pressure": "101.4794",
+      "id": 8054
+    },
+    {
+      "uid": "lop",
+      "time": 1534511404,
+      "temperature": "19.1482",
+      "pressure": "101.0432",
+      "id": 8055
+    },
+    {
+      "uid": "lop",
+      "time": 1534511406,
+      "temperature": "20.1514",
+      "pressure": "101.4997",
+      "id": 8056
+    },
+    {
+      "uid": "lop",
+      "time": 1534511408,
+      "temperature": "21.0138",
+      "pressure": "101.0851",
+      "id": 8057
+    },
+    {
+      "uid": "lop",
+      "time": 1534511409,
+      "temperature": "18.4141",
+      "pressure": "101.3269",
+      "id": 8058
+    },
+    {
+      "uid": "lop",
+      "time": 1534511410,
+      "temperature": "21.4164",
+      "pressure": "101.4798",
+      "id": 8059
+    },
+    {
+      "uid": "lop",
+      "time": 1534511412,
+      "temperature": "19.9165",
+      "pressure": "101.0538",
+      "id": 8060
+    },
+    {
+      "uid": "lop",
+      "time": 1534511414,
+      "temperature": "20.2408",
+      "pressure": "101.2681",
+      "id": 8061
+    },
+    {
+      "uid": "lop",
+      "time": 1534511415,
+      "temperature": "19.2046",
+      "pressure": "101.4704",
+      "id": 8062
+    },
+    {
+      "uid": "lop",
+      "time": 1534511417,
+      "temperature": "19.0946",
+      "pressure": "101.4513",
+      "id": 8063
+    },
+    {
+      "uid": "lop",
+      "time": 1534511419,
+      "temperature": "19.2593",
+      "pressure": "101.4846",
+      "id": 8064
+    },
+    {
+      "uid": "lop",
+      "time": 1534511420,
+      "temperature": "18.8980",
+      "pressure": "101.1891",
+      "id": 8065
+    },
+    {
+      "uid": "lop",
+      "time": 1534511421,
+      "temperature": "20.9712",
+      "pressure": "101.0600",
+      "id": 8066
+    },
+    {
+      "uid": "lop",
+      "time": 1534511423,
+      "temperature": "20.8640",
+      "pressure": "101.0315",
+      "id": 8067
+    },
+    {
+      "uid": "lop",
+      "time": 1534511425,
+      "temperature": "18.2845",
+      "pressure": "100.9950",
+      "id": 8068
+    },
+    {
+      "uid": "lop",
+      "time": 1534511426,
+      "temperature": "18.6543",
+      "pressure": "100.9504",
+      "id": 8069
+    },
+    {
+      "uid": "lop",
+      "time": 1534511428,
+      "temperature": "19.4007",
+      "pressure": "101.3381",
+      "id": 8070
+    },
+    {
+      "uid": "lop",
+      "time": 1534511428,
+      "temperature": "18.3680",
+      "pressure": "101.3545",
+      "id": 8071
+    },
+    {
+      "uid": "lop",
+      "time": 1534511429,
+      "temperature": "21.6287",
+      "pressure": "101.1902",
+      "id": 8072
     }
   ]
 }

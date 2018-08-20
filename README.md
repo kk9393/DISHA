@@ -24,7 +24,7 @@ DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 c
 7. $ truffle migrate --reset
 8. $ npm run dev
 
-For realtime data tracking:
+## For realtime data tracking:
 1. $ npm install -g json-server
 2. cd data
 3. json-server --watch db.json

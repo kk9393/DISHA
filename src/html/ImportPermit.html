@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="text-align:center;background-color:#d1d1d1;">
+
+<div class="navbar">
+    <p><a href="../index.html"><img src="../images/DISHA_logo.png" alt="DISHA_Logo" style="height:80px;padding-top: 10px;" align="middle"></a><a style="margin-left:100px"><a class="navhead" style="color: #db5046">D</a><a class="navhead">ecentralized and </a><a class="navhead" style="color: #db5046">I</a><a class="navhead">ntegrated </a><a class="navhead" style="color: #db5046">Sh</a><a class="navhead">ipping ports </a><a class="navhead" style="color: #db5046">A</a><a class="navhead">dministration</a></a></p>
+</div>
+
+
+<p style="font-size: 20px;"><b>Import Permit Form</b></p>
+
+
+<div class="container">
+    <form style="margin-left: 150px; margin-right: 150px;" id="myform" runat="server">
+
+        <label for="uniqueidid">Unique PID</label>
+        <input type="text" id="uniqueidid" name="uniqueidid" placeholder="Type Unique PID here.." />
+        <p><a align ="center" id="UniqueIdfield_tmp"></a></p>
+        <br>
+
+        <label for="nameid"> Name</label>
+        <input type="text" id="nameid" name="nameid" placeholder="Type name here.."/>
+
+        <!--address _uniqueId, string _name, string _postaladdress,
+        string _PAN_number, string _country, string _Aadhar_number-->
+
+        <label for="postaladdressid">Postal Address</label>
+        <textarea id="postaladdressid" name="postaladdressid" placeholder="Type postal address here.." style="height:150px"></textarea>
+
+        <label for="countryid">Country</label>
+        <input type="text" id="countryid" name="countryid" placeholder="Type name of country here.."/>
+
+        <label for="pannumberid">PAN Number</label>
+        <input type="text" id="pannumberid" name="pannumberid" placeholder="Type pan number here.."/>
+
+        <label for="aadharnumberid">Aadhar number</label>
+        <input type="text" id="aadharnumberid" name="aadharnumberid" placeholder="Type aadhar number here.."/>
+
+        <br>
+        <br>
+        <p style="margin-top: 20px"><a align ="center" style="color:red" id="mandatoryid"></a></p>
+        <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="UniqueIdoutput"></a></p>
+
+        <br>
+        <input class="button" type="button" id="sign_button"  value="Sign" onclick="return App.SetImportPermitdata_js();">
+    </form>
+</div>
+
+<div class="container topmarginhomepagebutton">
+    <form style="margin-left: 150px; margin-right: 150px;" id="officialform" runat="server">
+        <p style="margin-top: 20px"><a align ="center" style="color:red">FOR OFFICIAL USE ONLY</a></p>
+        <br>
+
+        <label for="uniqueidid2">Unique PID</label>
+        <input type="text" id="uniqueidid2" name="uniqueidid2" placeholder="Type Unique ID here.." />
+        <p ><a align ="center" id="UniqueIdfield_tmp2"></a></p>
+        <br>
+
+        <label for="nameofofficialid"> Name of signed Official</label>
+        <input disabled type="text" id="nameofofficialid" name="nameofofficialid" placeholder="Name of signed official will be shown here.."/>
+        <br>
+        <p style="margin-top: 20px"><a align ="center" style="color:red" id="mandatoryid2"></a></p>
+        <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="UniqueIdoutput2"></a></p>
+        <p style="margin-top: 20px"><a align ="center" style="font-family:Futura" id="contract_status"></a></p>
+        <input class="button" type="button" id="sign_official_button"  value="Sign" onclick="return App.signImportPermit_official_js();">
+    </form>
+</div>
+<br>
+<br>
+<br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/web3.min.js"></script>
+<script src="../js/truffle-contract.js"></script>
+<script src="../js/jsfiles/ImportPermit.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/fontawesome/css/all.css" >
+</head>
+
+<body style="text-align:center;background-color:#d1d1d1;" class="body">
+
+<div class="navbar">
+    <p><a href="../index.html"><img src="../images/DISHA_logo.png" alt="DISHA_Logo" style="height:80px;padding-bottom: 10px;" align="middle"></a><a style="margin-left:100px"><a class="navhead" style="color: #db5046">D</a><a class="navhead">ecentralized and </a><a class="navhead" style="color: #db5046">I</a><a class="navhead">ntegrated </a><a class="navhead" style="color: #db5046">Sh</a><a class="navhead">ipping ports </a><a class="navhead" style="color: #db5046">A</a><a class="navhead">dministration</a></a></p>
+</div>
+
+<h4 class="topmarginlist">Enter Unique ID here:</h4>
+
+<input style="width:40%" type="text" id="uniqueidid" name="uniqueidid" placeholder="Type UID here.."/>
+
+<input style="width:100px; height:40px" class="button" type="button" onclick="setUID()" value="Submit" > </br>
+<p><a align ="center" id="UniqueIdfield_tmp" style="color:red"></a></p>
+</br>
+<p>Contracts : </p>
+<table id="contracts_table" >
+    <tr>
+        <td><b>Status</b></td>
+        <th>Import General Manifest</th>
+        <th>Bill of Entry</th>
+        <th>Bill of Lading</th>
+        <th>Customs Officer Clearance</th>
+        <th>Assessing Officer Clearance</th>
+        <th>Shed Inspector Clearance</th>
+    </tr>
+    <tr>
+        <td style="color:#db5046"><b>Submission</b></td>
+        <td id="imgcreatedid">N/A</td>
+        <td id="billofentrycreatedid">N/A</td>
+        <td id="billofladingcreatedid">N/A</td>
+        <td id="customsofficerclearencecreatedid">N/A</td>
+        <td id="assessingofficerclearancecreatedid">N/A</td>
+        <td id="shedinspectorclearancecreatedid">N/A</td>
+    </tr>
+    <tr>
+        <td style="color:#db5046"><b>Verification</b></td>
+        <td id="imgverifiedid">N/A</td>
+        <td id="billofentryverifiedid">N/A</td>
+        <td id="billofladingverifiedid">N/A</td>
+        <td id="customsofficerclearenceverifiedid">N/A</td>
+        <td id="assessingofficerclearanceverifiedid">N/A</td>
+        <td id="shedinspectorclearanceverifiedid">N/A</td>
+    </tr>
+</table>
+</br>
+<p>Permits : </p>
+<table id="permits_table" >
+    <tr>
+        <th>Import Permit</th>
+        <th>Vessels registration</th>
+        <th>Ship Tonnage Certificate</th>
+        <th>Immigration Certificate</th>
+    </tr>
+    <tr>
+        <td id="importpermitid">N/A</td>
+        <td id="vesselsregistrationid">N/A</td>
+        <td id="shiptonnagecertificateid">N/A</td>
+        <td id="immigrationcertificateid">N/A</td>
+    </tr>
+
+</table>
+
+<div class="footer">
+    <p ><a href="https://www.movehack.gov.in/global-mobility-hackathon/" target="_blank"><img src="../images/MoveHack_logo.png" alt="MOVEHACK_Logo" style="height:100px;" align="middle"></a><a style="margin-left: 100px";>Blockchain for streamlining of Shipping Ports in India, By Team CodeXpert</a></p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/web3.min.js"></script>
+<script src="../js/truffle-contract.js"></script>
+<script src="../js/jsfiles/track.js"></script>
+
+</body>
+</html>

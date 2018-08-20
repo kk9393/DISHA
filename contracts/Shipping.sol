@@ -22,6 +22,10 @@ contract Shipping{
     // portofloading = 8; nameofimporter = 9;
     mapping (address => uint[40]) public datauintmapping;
     // billno = 0; weightofcargo = 1; containernumber = 2; custom_duty = 3; cha_code = 4; GST = 5;
+    mapping (address => address[10]) public permitsstringmapping;
+    //Import_Permit_UID = 0;
+    mapping (address => bool[10]) public permitboolmapping;
+    //isImport_Permit_submitted = 0;
 
     struct IGM_officialsStruct {
         string name;
@@ -89,6 +93,20 @@ contract Shipping{
     }
 
 /////////////////////////////////MODIFIERS END///////////////////////////////////
+
+//////////////////////////////////////PERMITS////////////////////////////////////
+
+function setImportPermit(address _uniqueId, address _uniqueId_Permit) returns (string){
+    if(permitboolmapping[_uniqueId][0]){
+        return "Import Permit already submitted";
+        throw;
+    }
+    permitsstringmapping[_uniqueId][0] = _uniqueId_Permit;
+    permitboolmapping[_uniqueId][0] = true;
+    return "Import Permit submitted";
+}
+
+/////////////////////////////////////PERMITS END/////////////////////////////////
 
 ////////////////////////////////IGM FUNCTIONS////////////////////////////////////
 

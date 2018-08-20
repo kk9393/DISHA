@@ -156,7 +156,6 @@ App = {
     web3.eth.filter('latest', function(error, result){
        if (!error) {
           setTimeout(function () {
-                console.log("checkuiqueIdvar check", checkuiqueIdvar2);
                 document.getElementById("UniqueIdoutput2").innerHTML = "Your form is submitted and digitally signed successfully";
 
               }, 3000);
