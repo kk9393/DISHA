@@ -213,3 +213,16 @@ table#permits_table th {
   top:0px;
   left:0px;
 }
+
+.cargo2 {
+  position : absolute;
+  top:0px;
+  left:0px;
+}
+
+.img-hor-vert {
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}

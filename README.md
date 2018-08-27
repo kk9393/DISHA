@@ -34,8 +34,9 @@ DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 c
 
 ------- Developed by : Team CodeXpert -------
 
-      Ganesh Deshpande
       Krishna Kulkarni
+      Ganesh Deshpande
+
 ----------------------------
 
 Contact : krishnakulkarni9393@gmail.com
