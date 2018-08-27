@@ -11,6 +11,7 @@ DISHA is a fully working blockchain platform prototype built for MOVEHACK 2018 c
 3. Ganache : https://truffleframework.com/ganache
 4. Metamask chrome extension : https://metamask.io/
 5. json-server : https://github.com/typicode/json-server
+6. web3.js : https://github.com/ethereum/web3.js/
 -------------------------------------------------------
 
 -------------------------------------------------------
